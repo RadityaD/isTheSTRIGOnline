@@ -1,9 +1,9 @@
-var RALOBH = 76561198019033820;
-var theSTRIG = 76561198045150039;
+var ralobh = 76561198019033820;
+var thestrig = 76561198045150039;
 
 function theSTRIG1() {
   $.ajax({
-    url:'https://crossorigin.me/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=45006881A2B6B7D0733AA48750D85531&format=json&steamids='+theSTRIG,
+    url:'https://crossorigin.me/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=45006881A2B6B7D0733AA48750D85531&format=json&steamids='+thestrig,
     dataType:'json',
     success:function(result){
 

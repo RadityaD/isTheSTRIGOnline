@@ -1,0 +1,19 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One';
+
+body {
+  margin-top: 60px;
+  font-family: "Open Sans";
+}
+
+#title > h1 {
+  margin: 60px 0px 30px 0px;
+  font-family: "Poiret One";
+}
+
+#steamed {
+  padding: 60px;
+}
+
+p {
+  padding-bottom: 60px;
+}

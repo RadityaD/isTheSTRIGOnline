@@ -46,7 +46,7 @@ function theSTRIG1() {
           game+'</h3></div></div>';
 
       $("#steamed").html(html);
-      console.log(result.response.players[0]);
+      //console.log(result.response.players[0]);
     }
   });
 }
@@ -63,5 +63,5 @@ function theSTRIG2(){
 
 $(document).ready(function(){
   theSTRIG1();
-  theSTRIG2();
+  //theSTRIG2();
 });

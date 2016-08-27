@@ -3,7 +3,7 @@ var theSTRIG = 76561198045150039;
 
 function theSTRIG1() {
   $.ajax({
-    url:'https://crossorigin.me/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=45006881A2B6B7D0733AA48750D85531&format=json&steamids='+RALOBH,
+    url:'https://crossorigin.me/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=45006881A2B6B7D0733AA48750D85531&format=json&steamids='+theSTRIG,
     dataType:'json',
     success:function(result){
 

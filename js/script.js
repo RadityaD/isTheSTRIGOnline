@@ -1,5 +1,5 @@
-var ralobh = 76561198019033820;
-var thestrig = 76561198045150039;
+var RALOBH = "76561198019033820";
+var theSTRIG = "76561198045150039";
 
 function theSTRIG1() {
   $.ajax({
@@ -53,15 +53,26 @@ function theSTRIG1() {
 
 function theSTRIG2(){
   $.ajax({
-    url:'https://crossorigin.me/https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v2/?key=45006881A2B6B7D0733AA48750D85531&format=json&steamid=76561198045150039&appid=570',
+    url:'https://crossorigin.me/https://api.steampowered.com/IPlayerService/GetOwnedGames/v1/?key=45006881A2B6B7D0733AA48750D85531&format=json&steamid=76561198045150039&include_appinfo=1&include_played_free_games=1',
     dataType:"json",
     success:function(result){
-      console.log(result);
+      var appid=570;
+      var gameTime;
+
+      for(var i = 0; i < (result.response.games).length; i++){
+        if(result.response.games[i].appid == 570){
+          gameTime = (result.response.games[i].playtime_forever)/60;
+        }
+      }
+
+      $("#counter").html('<h3 class="text-center">'+Math.ceil(gameTime)+' Hours of Gameplay</h3>');
+      //console.log(result.response.games[31]);
     }
   });
 }
 
+
 $(document).ready(function(){
   theSTRIG1();
-  //theSTRIG2();
+  theSTRIG2();
 });
